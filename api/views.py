@@ -3,15 +3,28 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework.response import Response
 from rest_framework import status, generics
-from api.models import Computer
-from api.models import Room, Computer
-from api.serializers import ComputerSerializer
+from api.models import Room, Computer, Incident, Office
+from api.serializers import ComputerSerializer, OfficeSerializer, IncidentSerializer
+
+def HomePage(request):
+    return render(request, 'index.html')
+
+
+
+class OfficeCreateView(generics.CreateAPIView):
+    queryset = Office.objects.all()
+    serializer_class = OfficeSerializer
+
+class IncidentCreateView(generics.CreateAPIView):
+    queryset = Incident.objects.all()
+    serializer_class = IncidentSerializer
 
 
 def check_room_limit(room_id):
     room = Room.objects.get(id=room_id)
     current_count = Computer.objects.filter(room_id=room_id).count()
     return current_count < room.max_computers
+
 class ComputerCreateView(generics.CreateAPIView):
     queryset = Computer.objects.all()
     serializer_class = ComputerSerializer
@@ -26,3 +39,4 @@ class ComputerCreateView(generics.CreateAPIView):
             )
 
         return super().create(request, *args, **kwargs)
+
