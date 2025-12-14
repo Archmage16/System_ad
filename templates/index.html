@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Выйти</button>
+    </form>
     <h1>It is a home Page.
         Select your option from the API.
     </h1>
