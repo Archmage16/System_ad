@@ -4,10 +4,13 @@ from api.views import *
 urlpatterns = [
     path('login/', UserLoginView.as_view(), name='login'),
     path('logout/', UserLogoutView.as_view(), name='logout'),
-    path('', HomePage, name='home'),
     
-    path('api/computers/', ComputerCreateView.as_view()),
-    path('api/offices/', OfficeCreateView.as_view()),
-    path('api/incidents/', IncidentCreateView.as_view()),
+    path('', HomePage, name='home'),
+    path('data_base/', data_base_view, name='data_base'),
+
+    # path('api/u')
+    path('api/computers/', ComputerCreateView.as_view(), name='computer-create'),
+    path('api/offices/', OfficeCreateView.as_view(), name='office-create'),
+    path('api/incidents/', IncidentCreateView.as_view(), name='incident-create'),
 ]
 # 54321

@@ -1,17 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form method="post" action="{% url 'logout' %}">
-        {% csrf_token %}
-        <button type="submit">Выйти</button>
-    </form>
-    <h1>It is a home Page.
-        Select your option from the API.
-    </h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<h2>Добро пожаловать, {{ user.username }} 👋</h2>
+
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5>📊 Данные</h5>
+        <p>Просмотр и управление записями</p>
+        <a href="{% url 'data_base'%}" class="btn btn-primary btn-sm">Открыть</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5>📈 Отчёты</h5>
+        <p>Аналитика и статистика</p>
+        <a href="/reports/" class="btn btn-success btn-sm">Перейти</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

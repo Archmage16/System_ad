@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block title %}База данных{% endblock %}
+
+{% block content %}
+<center><h2 class="mb-4">📚 База данных системы</h2></center>
+
+
+<!-- Office -->
+<h4 class="mt-4">🏢 Офисы</h4>
+<div class="">
+    <div class="row">
+        {% for office in Office%}
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ office.name }}</h5>
+                    <p class="card-text">{{ office.address }}</p>
+                    <small class="text-muted">Создано: {{ office.created_at|date:"d.m.Y H:i" }}</small>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-muted">Нет офисов</p>
+        {% endfor %}
+    </div>
+    <a href="{% url 'office-create'%}">Create new Office</a>
+</div>
+
+<!-- Rooms -->
+<h4 class="mt-4">🚪 Комнаты</h4>
+<div class="">
+    <div class="row">
+        {% for room in Room %}
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ room.office.name }} - {{ room.room_number }}</h5>
+                    <p class="card-text">Макс. мест: {{ room.max_places }}</p>
+                    <small class="text-muted">Создано: {{ room.created_at|date:"d.m.Y H:i" }}</small>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-muted">Нет комнат</p>
+        {% endfor %}
+    </div>
+</div>
+
+
+<!-- Computers -->
+<h4 class="mt-4">💻 Компьютеры</h4>
+<div class="table-responsive shadow-sm rounded mb-4">
+<table class="table table-hover table-bordered align-middle bg-white">
+    <thead class="table-dark text-center">
+        <tr>
+            <th>ID</th>
+            <th>Хост</th>
+            <th>IP</th>
+            <th>Пользователь</th>
+            <th>Комната</th>
+            <th>Дата создания</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for computer in data %}
+        <tr>
+            <td class="text-center">{{ computer.id }}</td>
+            <td>{{ computer.hostname }}</td>
+            <td>{{ computer.ip_address }}</td>
+            <td>{{ computer.user_fullname }}</td>
+            <td>{{ computer.room.room_number}}</td>
+            <td class="text-center">{{ computer.created_at|date:"d.m.Y H:i" }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6" class="text-center text-muted">Нет компьютеров</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<center><a href="{% url 'computer-create'%}">Create new Computer</a></center>
+</div>
+
+<!-- Incidents -->
+<h4 class="mt-4">⚠️ Инциденты</h4>
+<div class="table-responsive shadow-sm rounded">
+<table class="table table-hover table-bordered align-middle bg-white">
+    <thead class="table-dark text-center">
+        <tr>
+            <th>ID</th>
+            <th>Компьютер</th>
+            <th>Комната</th>
+            <th>Сообщение</th>
+            <th>Статус</th>
+            <th>Создано</th>
+            <th>Закрыто</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for incident in Incident%}
+        <tr>
+            <td class="text-center">{{ incident.id }}</td>
+            <td>{{ incident.computer.hostname}}</td>
+            <td>{{ incident.room.room_number}}</td>
+            <td>{{ incident.user_message|truncatechars:50 }}</td>
+            <td>{{ incident.get_status_display }}</td>
+            <td class="text-center">{{ incident.created_at|date:"d.m.Y H:i" }}</td>
+            <td class="text-center">{{ incident.closed_at|date:"d.m.Y H:i" }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="7" class="text-center text-muted">Нет инцидентов</td>
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+</div>
+
+{% endblock %}

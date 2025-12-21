@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.decorators import login_required
-
+from django.core.paginator import Paginator
 # rest.
 from rest_framework.permissions import IsAuthenticated
 from api.permissions import IsSuperUserOrReadOnly
@@ -53,3 +53,28 @@ class ComputerCreateView(generics.ListCreateAPIView):
             )
 
         return super().create(request, *args, **kwargs)
+
+
+
+@login_required
+def data_base_view(request):
+    # Поиск по компьютерам
+    query = request.GET.get('q', '')
+    computers = Computer.objects.all()
+    if query:
+        computers = computers.filter(hostname__icontains=query)
+
+    # Пагинация для компьютеров
+    paginator = Paginator(computers.order_by('-created_at'), 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'data': page_obj,           # Компьютеры для таблицы
+        'page_obj': page_obj,
+        'is_paginated': page_obj.has_other_pages(),
+        'Office': Office.objects.all(),    # Офисы для карточек
+        'Room': Room.objects.all(),        # Комнаты для карточек
+        'Incident': Incident.objects.all(),# Инциденты для таблицы
+    }
+    return render(request, 'dataCRUd/data_base.html', context)
