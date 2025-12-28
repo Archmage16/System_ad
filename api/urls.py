@@ -7,6 +7,7 @@ urlpatterns = [
     
     path('', HomePage, name='home'),
     path('data_base/', data_base_view, name='data_base'),
+    path('reports/', reports_view, name='reports'),
 
     # path('api/u')
     path('api/computers/', ComputerCreateView.as_view(), name='computer-create'),

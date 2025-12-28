@@ -78,3 +78,19 @@ def data_base_view(request):
         'Incident': Incident.objects.all(),# Инциденты для таблицы
     }
     return render(request, 'dataCRUd/data_base.html', context)
+
+@login_required
+def reports_view(request):
+    inc = Incident.objects.all() 
+    condition = len(inc)
+    if condition == 0:
+        status = "Amazing condition — no incidents recorded."
+    elif condition < 10:
+        status = "Normal condition — less than 10 incidents recorded."
+    elif condition >= 10:
+        status = "Bad condition — more than 10 incidents recorded."
+    else:
+        status = "No data available to determine condition."
+    context = {'incidents': inc,
+               'status': status}
+    return render(request, 'dataCRUd/reports.html', context)
