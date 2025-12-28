@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api',
     'rest_framework',
+    "api.apps.ApiConfig",
 ]
 
 MIDDLEWARE = [
@@ -70,7 +70,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'diplom.wsgi.application'
 
-
+TELEGRAM_BOT_TOKEN='8255895913:AAEGjO5jnVMcpZpNHo6JtYmDWmLKgZ0vLP0'
+TELEGRAM_CHAT_ID = '6879066557'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
