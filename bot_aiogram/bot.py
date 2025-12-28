@@ -6,21 +6,19 @@ from aiogram.filters import Command
 from aiogram.types import Message
 
 from config import BOT_TOKEN
-
+from handlers import router
 logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
+
 @dp.message(Command("start"))
 async def start(message: Message):
     await message.answer("Привет! Бот запущен 🚀")
 
-@dp.message()
-async def echo(message: Message):
-    await message.answer(f"Вы написали: {message.text}")
-
 async def main():
+    dp.include_router(router)
     await dp.start_polling(bot)
 
 if __name__ == "__main__":

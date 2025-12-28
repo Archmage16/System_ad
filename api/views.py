@@ -7,8 +7,9 @@ from rest_framework.permissions import IsAuthenticated
 from api.permissions import IsSuperUserOrReadOnly
 from rest_framework.response import Response
 from rest_framework import status, generics
+from rest_framework.decorators import api_view
 # api
-from api.models import Room, Computer, Incident, Office
+from api.models import Room, Computer, Incident, Office, TelegramProfile
 from api.serializers import ComputerSerializer, OfficeSerializer, IncidentSerializer
 
 class UserLoginView(LoginView):
@@ -32,6 +33,13 @@ class IncidentCreateView(generics.ListCreateAPIView):
     queryset = Incident.objects.all()
     serializer_class = IncidentSerializer
     permission_classes = [IsAuthenticated, IsSuperUserOrReadOnly]
+
+
+@api_view(['GET'])
+def not_done_incidents(request):
+    incidents = Incident.objects.filter(status__in=['new', 'in_progress'])
+    serializer = IncidentSerializer(incidents, many=True)
+    return Response(serializer.data)
 
 
 def check_room_limit(room_id):
@@ -94,3 +102,22 @@ def reports_view(request):
     context = {'incidents': inc,
                'status': status}
     return render(request, 'dataCRUd/reports.html', context)
+
+@api_view(['GET'])
+def not_done_incidents(request):
+    telegram_id = request.GET.get("telegram_id")
+
+    if not telegram_id:
+        return Response({"error": "telegram_id required"}, status=400)
+
+    try:
+        profile = TelegramProfile.objects.get(telegram_id=telegram_id)
+    except TelegramProfile.DoesNotExist:
+        return Response({"error": "Access denied"}, status=403)
+
+    if not profile.user.is_staff:
+        return Response({"error": "Not admin"}, status=403)
+
+    incidents = Incident.objects.exclude(status='done')
+    serializer = IncidentSerializer(incidents, many=True)
+    return Response(serializer.data)
