@@ -2,12 +2,15 @@ from django.shortcuts import render
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
+from django.utils import timezone
 # rest.
 from rest_framework.permissions import IsAuthenticated
 from api.permissions import IsSuperUserOrReadOnly
 from rest_framework.response import Response
 from rest_framework import status, generics
 from rest_framework.decorators import api_view
+from rest_framework.permissions import AllowAny
+from rest_framework.views import APIView
 # api
 from api.models import Room, Computer, Incident, Office, TelegramProfile
 from api.serializers import ComputerSerializer, OfficeSerializer, IncidentSerializer
@@ -33,7 +36,15 @@ class IncidentCreateView(generics.ListCreateAPIView):
     queryset = Incident.objects.all()
     serializer_class = IncidentSerializer
     permission_classes = [IsAuthenticated, IsSuperUserOrReadOnly]
+class IncidentCreateView(APIView):
+    permission_classes = [AllowAny]
 
+    def post(self, request):
+        serializer = IncidentSerializer(data=request.data)
+        if serializer.is_valid():
+            incident = serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET'])
 def not_done_incidents(request):
@@ -121,3 +132,29 @@ def not_done_incidents(request):
     incidents = Incident.objects.exclude(status='done')
     serializer = IncidentSerializer(incidents, many=True)
     return Response(serializer.data)
+
+@api_view(['POST'])
+def close_incident(request, incident_id):
+    telegram_id = request.data.get("telegram_id")
+
+    if not telegram_id:
+        return Response({"error": "telegram_id required"}, status=400)
+
+    try:
+        profile = TelegramProfile.objects.get(telegram_id=telegram_id)
+    except TelegramProfile.DoesNotExist:
+        return Response({"error": "Access denied"}, status=403)
+
+    if not profile.user.is_staff:
+        return Response({"error": "Not admin"}, status=403)
+
+    try:
+        incident = Incident.objects.get(id=incident_id)
+    except Incident.DoesNotExist:
+        return Response({"error": "Incident not found"}, status=404)
+
+    incident.status = "done"
+    incident.closed_at = timezone.now()
+    incident.save()
+
+    return Response({"ok": True})
