@@ -64,8 +64,6 @@ async def add_incident_receive(message: Message, state: FSMContext):
     except Exception as e:
         for part in split_message(f"❌ Произошла ошибка при соединении с API: {e}"):
             await message.answer(part)
-
-    # Завершаем состояние, чтобы бот больше не ждал текст
     await state.clear()
 
 @router.message(Command("tasks"))

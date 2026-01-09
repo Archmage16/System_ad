@@ -13,7 +13,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 # api
 from api.models import Room, Computer, Incident, Office, TelegramProfile
-from api.serializers import ComputerSerializer, OfficeSerializer, IncidentSerializer
+from api.serializers import ComputerSerializer, OfficeSerializer, IncidentSerializer, RoomSerializer
 
 class UserLoginView(LoginView):
     template_name = 'login.html'
@@ -30,12 +30,17 @@ class OfficeCreateView(generics.ListCreateAPIView):
     queryset = Office.objects.all()
     serializer_class = OfficeSerializer
     permission_classes = [IsAuthenticated, IsSuperUserOrReadOnly]
-
+    
+class RoomCreateView(generics.ListCreateAPIView):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializer
+    permission_classes = [IsAuthenticated, IsSuperUserOrReadOnly]
 
 class IncidentCreateView(generics.ListCreateAPIView):
     queryset = Incident.objects.all()
     serializer_class = IncidentSerializer
     permission_classes = [IsAuthenticated, IsSuperUserOrReadOnly]
+
 class IncidentCreateView(APIView):
     permission_classes = [AllowAny]
 
@@ -77,19 +82,16 @@ class ComputerCreateView(generics.ListCreateAPIView):
 
 @login_required
 def data_base_view(request):
-    # Поиск по компьютерам
     query = request.GET.get('q', '')
     computers = Computer.objects.all()
     if query:
         computers = computers.filter(hostname__icontains=query)
-
-    # Пагинация для компьютеров
     paginator = Paginator(computers.order_by('-created_at'), 10)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
     context = {
-        'data': page_obj,           # Компьютеры для таблицы
+        'data': page_obj,        
         'page_obj': page_obj,
         'is_paginated': page_obj.has_other_pages(),
         'Office': Office.objects.all(),    # Офисы для карточек
@@ -102,16 +104,17 @@ def data_base_view(request):
 def reports_view(request):
     inc = Incident.objects.all() 
     condition = len(inc)
+    
     if condition == 0:
-        status = "Amazing condition — no incidents recorded."
+        status_s = "Amazing condition — no incidents recorded."
     elif condition < 10:
-        status = "Normal condition — less than 10 incidents recorded."
+        status_s = "Normal condition — less than 10 incidents recorded."
     elif condition >= 10:
-        status = "Bad condition — more than 10 incidents recorded."
+        status_s = "Bad condition — more than 10 incidents recorded."
     else:
-        status = "No data available to determine condition."
+        status_s = "No data available to determine condition."
     context = {'incidents': inc,
-               'status': status}
+               'status_s': status_s}
     return render(request, 'dataCRUd/reports.html', context)
 
 @api_view(['GET'])

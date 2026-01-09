@@ -45,3 +45,16 @@ button:hover {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
+
+
+
+.reports_status{
+    text-align: center;
+}
+.reports_incidents{
+    border: 1px solid black;
+}
+.reports_incidents > .loggs{
+    border: 1px solid black;
+    padding: 10px;
+}

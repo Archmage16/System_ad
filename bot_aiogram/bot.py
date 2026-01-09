@@ -43,7 +43,7 @@ async def incidents_handler(message: types.Message):
             callback_data=f"close:{inc['id']}"
         )
 
-    builder.adjust(1)  # по одной кнопке в строке
+    builder.adjust(1)  
 
     await message.answer(
         "Выбери инцидент:",
