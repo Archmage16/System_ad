@@ -4,6 +4,7 @@ import sys
 
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
+from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 
 from config import BOT_TOKEN
@@ -22,15 +23,17 @@ logger = logging.getLogger(__name__)
 
 async def main():
     """Запуск бота."""
-    # Инициализация бота и диспетчера
-    bot = Bot(token=BOT_TOKEN, parse_mode=ParseMode.HTML)
+    # Инициализация бота с правильными параметрами для aiogram 3.7+
+    bot = Bot(
+        token=BOT_TOKEN,
+        default=DefaultBotProperties(parse_mode=ParseMode.HTML)
+    )
+    
     storage = MemoryStorage()
     dp = Dispatcher(storage=storage)
     
-    # Включаем роутер
     dp.include_router(router)
     
-    # Удаляем вебхук и запускаем поллинг
     await bot.delete_webhook(drop_pending_updates=True)
     
     logger.info("🤖 Бот запущен...")

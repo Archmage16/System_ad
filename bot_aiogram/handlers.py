@@ -236,13 +236,13 @@ async def my_id(message: Message):
     await message.answer(f"🆔 Ваш Telegram ID: `{message.from_user.id}`", parse_mode="Markdown")
 
 # ----------------- Команда /cancel -----------------
-@router.message(Command("cancel"))
-async def cancel_handler(message: Message, state: FSMContext):
-    """Отменить текущую операцию."""
-    current_state = await state.get_state()
-    if current_state is None:
-        await message.answer("ℹ️ Нет активных операций для отмены.")
-        return
-    
-    await state.clear()
-    await message.answer("❌ Операция отменена.")
+    @router.message(Command("cancel"))
+    async def cancel_handler(message: Message, state: FSMContext):
+        """Отменить текущую операцию."""
+        current_state = await state.get_state()
+        if current_state is None:
+            await message.answer("ℹ️ Нет активных операций для отмены.")
+            return
+        
+        await state.clear()
+        await message.answer("❌ Операция отменена.")
