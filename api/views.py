@@ -35,7 +35,27 @@ class RoomCreateView(generics.ListCreateAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
     permission_classes = [IsAuthenticated, IsSuperUserOrReadOnly]
-
+class AvailableRoomsView(generics.ListAPIView):
+    """API для получения списка доступных комнат (для бота)"""
+    queryset = Room.objects.select_related('office').all()
+    serializer_class = RoomSerializer
+    permission_classes = [AllowAny]  # Разрешаем доступ без авторизации для бота
+    
+    def list(self, request, *args, **kwargs):
+        rooms = self.get_queryset()
+        serializer = self.get_serializer(rooms, many=True)
+        
+        # Форматируем данные для удобства в боте
+        formatted_data = []
+        for room in serializer.data:
+            formatted_data.append({
+                'id': room['id'],
+                'room_number': room['room_number'],
+                'office_name': room.get('office_name', ''),
+                'full_name': f"{room.get('office_name', 'Офис')} - кабинет {room['room_number']}"
+            })
+        
+        return Response(formatted_data)
 class IncidentCreateView(generics.ListCreateAPIView):
     queryset = Incident.objects.all()
     serializer_class = IncidentSerializer

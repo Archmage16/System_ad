@@ -1,0 +1,564 @@
+2026-01-09 19:49:36,625 - aiogram.dispatcher - INFO - Start polling
+2026-01-09 19:49:36,709 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 19:50:13,440 - aiogram.event - INFO - Update id=22140266 is handled. Duration 282 ms by bot id=8255895913
+2026-01-09 19:50:19,241 - aiogram.event - INFO - Update id=22140267 is handled. Duration 109 ms by bot id=8255895913
+2026-01-09 19:50:24,210 - aiogram.event - INFO - Update id=22140268 is not handled. Duration 0 ms by bot id=8255895913
+2026-01-09 19:50:30,625 - aiogram.event - INFO - Update id=22140269 is handled. Duration 109 ms by bot id=8255895913
+2026-01-09 19:50:50,929 - aiogram.event - INFO - Update id=22140270 is handled. Duration 125 ms by bot id=8255895913
+2026-01-09 19:50:59,625 - aiogram.event - INFO - Update id=22140271 is handled. Duration 469 ms by bot id=8255895913
+2026-01-09 19:52:13,472 - aiogram.event - INFO - Update id=22140272 is handled. Duration 125 ms by bot id=8255895913
+2026-01-09 20:12:54,240 - aiogram.dispatcher - INFO - Start polling
+2026-01-09 20:12:54,322 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:13:13,665 - aiogram.event - INFO - Update id=22140273 is handled. Duration 281 ms by bot id=8255895913
+2026-01-09 20:13:21,814 - aiogram.event - INFO - Update id=22140274 is not handled. Duration 15 ms by bot id=8255895913
+2026-01-09 20:13:28,490 - aiogram.event - INFO - Update id=22140275 is not handled. Duration 15 ms by bot id=8255895913
+2026-01-09 20:13:36,234 - aiogram.event - INFO - Update id=22140276 is handled. Duration 125 ms by bot id=8255895913
+2026-01-09 20:13:51,979 - aiogram.event - INFO - Update id=22140277 is handled. Duration 187 ms by bot id=8255895913
+2026-01-09 20:14:08,779 - aiogram.event - INFO - Update id=22140278 is not handled. Duration 0 ms by bot id=8255895913
+2026-01-09 20:14:17,562 - aiogram.event - INFO - Update id=22140279 is not handled. Duration 0 ms by bot id=8255895913
+2026-01-09 20:17:38,068 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-09 20:17:38,070 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-09 20:17:38,070 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-09 20:17:38,324 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:17:38,326 - __main__ - INFO - Бот остановлен
+2026-01-09 20:17:44,248 - aiogram.dispatcher - INFO - Start polling
+2026-01-09 20:17:44,332 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:17:50,518 - aiogram.event - INFO - Update id=22140280 is handled. Duration 358 ms by bot id=8255895913
+2026-01-09 20:17:58,275 - aiogram.event - INFO - Update id=22140281 is handled. Duration 108 ms by bot id=8255895913
+2026-01-09 20:18:12,592 - handlers - ERROR - Rooms API error
+2026-01-09 20:18:12,732 - aiogram.event - INFO - Update id=22140282 is handled. Duration 157 ms by bot id=8255895913
+2026-01-09 20:21:13,340 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-09 20:21:13,342 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-09 20:21:13,342 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-09 20:21:13,593 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:21:13,595 - __main__ - INFO - Бот остановлен
+2026-01-09 20:21:18,793 - aiogram.dispatcher - INFO - Start polling
+2026-01-09 20:21:18,887 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:21:25,428 - aiogram.event - INFO - Update id=22140283 is handled. Duration 407 ms by bot id=8255895913
+2026-01-09 20:21:31,214 - aiogram.event - INFO - Update id=22140284 is handled. Duration 94 ms by bot id=8255895913
+2026-01-09 20:21:35,267 - handlers - ERROR - Rooms API error
+2026-01-09 20:21:35,436 - aiogram.event - INFO - Update id=22140285 is handled. Duration 187 ms by bot id=8255895913
+2026-01-09 20:26:21,345 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-09 20:26:21,345 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-09 20:26:21,345 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-09 20:26:21,610 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:26:21,610 - __main__ - INFO - Бот остановлен
+2026-01-09 20:26:26,485 - aiogram.dispatcher - INFO - Start polling
+2026-01-09 20:26:26,569 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:26:28,242 - aiogram.event - INFO - Update id=22140286 is handled. Duration 327 ms by bot id=8255895913
+2026-01-09 20:26:31,886 - aiogram.event - INFO - Update id=22140287 is handled. Duration 234 ms by bot id=8255895913
+2026-01-09 20:26:38,286 - handlers - ERROR - Rooms API error
+2026-01-09 20:26:38,391 - aiogram.event - INFO - Update id=22140288 is handled. Duration 93 ms by bot id=8255895913
+2026-01-09 20:29:53,748 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-09 20:29:53,749 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-09 20:29:53,750 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-09 20:29:54,015 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:29:54,022 - __main__ - INFO - Бот остановлен
+2026-01-09 20:31:58,253 - aiogram.dispatcher - INFO - Start polling
+2026-01-09 20:31:58,338 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:32:03,420 - aiogram.event - INFO - Update id=22140289 is handled. Duration 281 ms by bot id=8255895913
+2026-01-09 20:32:08,371 - aiogram.event - INFO - Update id=22140290 is handled. Duration 109 ms by bot id=8255895913
+2026-01-09 20:32:12,811 - handlers - ERROR - Rooms API error: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Page not found at /rooms/available/</title>
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <style>
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font-family: sans-serif; background:#eee; color:#000; }
+    body > :where(header, main, footer) { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 small { font-size:60%; color:#666; font-weight:normal; }
+    table { border:none; border-collapse: collapse; width:100%; }
+    td, th { vertical-align:top; padding:2px 3px; }
+    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #info { background:#f6f6f6; }
+    #info ol { margin: 0.5em 4em; }
+    #info ol li { font-family: monospace; }
+    #summary { background: #ffc; }
+    #explanation { background:#eee; border-bottom: 0px none; }
+    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
+  </style>
+</head>
+<body>
+  <header id="summary">
+    <h1>Page not found <small>(404)</small></h1>
+    
+    <table class="meta">
+      <tr>
+        <th scope="row">Request Method:</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th scope="row">Request URL:</th>
+        <td>http://127.0.0.1:8000/rooms/available/</td>
+      </tr>
+      
+    </table>
+  </header>
+
+  <main id="info">
+    
+      <p>
+      Using the URLconf defined in <code>diplom.urls</code>,
+      Django tried these URL patterns, in this order:
+      </p>
+      <ol>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                login/
+                [name='login']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                logout/
+                [name='logout']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                
+                [name='home']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                data_base/
+                [name='data_base']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                reports/
+                [name='reports']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/computers/
+                [name='computer-create']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/offices/
+                [name='office-create']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/rooms/
+                [name='room-create']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/incidents/
+                [name='incident-create']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/incidents/not-done/
+                [name='not-done-incidents']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/incidents/&lt;int:incident_id&gt;/close/
+                
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                admin/
+                
+              </code>
+            
+          </li>
+        
+      </ol>
+      <p>
+        
+          The current path, <code>rooms/available/</code>,
+        
+        didn’t match any of these.
+      </p>
+    
+  </main>
+
+  <footer id="explanation">
+    <p>
+      You’re seeing this error because you have <code>DEBUG = True</code> in
+      your Django settings file. Change that to <code>False</code>, and Django
+      will display a standard 404 page.
+    </p>
+  </footer>
+</body>
+</html>
+
+2026-01-09 20:32:12,975 - aiogram.event - INFO - Update id=22140291 is handled. Duration 172 ms by bot id=8255895913
+2026-01-09 20:32:33,443 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-09 20:32:33,443 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-09 20:32:33,443 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-09 20:32:33,703 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:32:33,703 - __main__ - INFO - Бот остановлен
+2026-01-09 20:32:39,565 - aiogram.dispatcher - INFO - Start polling
+2026-01-09 20:32:39,654 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:32:58,004 - aiogram.event - INFO - Update id=22140293 is handled. Duration 1405 ms by bot id=8255895913
+2026-01-09 20:33:00,750 - aiogram.event - INFO - Update id=22140294 is handled. Duration 437 ms by bot id=8255895913
+2026-01-09 20:33:13,786 - handlers - ERROR - Rooms API error: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Page not found at /api/rooms/available/</title>
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <style>
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font-family: sans-serif; background:#eee; color:#000; }
+    body > :where(header, main, footer) { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 small { font-size:60%; color:#666; font-weight:normal; }
+    table { border:none; border-collapse: collapse; width:100%; }
+    td, th { vertical-align:top; padding:2px 3px; }
+    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #info { background:#f6f6f6; }
+    #info ol { margin: 0.5em 4em; }
+    #info ol li { font-family: monospace; }
+    #summary { background: #ffc; }
+    #explanation { background:#eee; border-bottom: 0px none; }
+    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
+  </style>
+</head>
+<body>
+  <header id="summary">
+    <h1>Page not found <small>(404)</small></h1>
+    
+    <table class="meta">
+      <tr>
+        <th scope="row">Request Method:</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th scope="row">Request URL:</th>
+        <td>http://127.0.0.1:8000/api/rooms/available/</td>
+      </tr>
+      
+    </table>
+  </header>
+
+  <main id="info">
+    
+      <p>
+      Using the URLconf defined in <code>diplom.urls</code>,
+      Django tried these URL patterns, in this order:
+      </p>
+      <ol>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                login/
+                [name='login']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                logout/
+                [name='logout']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                
+                [name='home']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                data_base/
+                [name='data_base']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                reports/
+                [name='reports']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/computers/
+                [name='computer-create']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/offices/
+                [name='office-create']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/rooms/
+                [name='room-create']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/incidents/
+                [name='incident-create']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/incidents/not-done/
+                [name='not-done-incidents']
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                
+                
+              </code>
+            
+              <code>
+                api/incidents/&lt;int:incident_id&gt;/close/
+                
+              </code>
+            
+          </li>
+        
+          <li>
+            
+              <code>
+                admin/
+                
+              </code>
+            
+          </li>
+        
+      </ol>
+      <p>
+        
+          The current path, <code>api/rooms/available/</code>,
+        
+        didn’t match any of these.
+      </p>
+    
+  </main>
+
+  <footer id="explanation">
+    <p>
+      You’re seeing this error because you have <code>DEBUG = True</code> in
+      your Django settings file. Change that to <code>False</code>, and Django
+      will display a standard 404 page.
+    </p>
+  </footer>
+</body>
+</html>
+
+2026-01-09 20:33:14,571 - aiogram.event - INFO - Update id=22140295 is handled. Duration 797 ms by bot id=8255895913
+2026-01-09 20:36:14,424 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-09 20:36:14,424 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-09 20:36:14,424 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-09 20:36:14,687 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:36:14,687 - __main__ - INFO - Бот остановлен
+2026-01-09 20:36:27,007 - aiogram.dispatcher - INFO - Start polling
+2026-01-09 20:36:27,090 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:36:44,642 - aiogram.event - INFO - Update id=22140296 is handled. Duration 280 ms by bot id=8255895913
+2026-01-09 20:36:48,309 - aiogram.event - INFO - Update id=22140297 is handled. Duration 109 ms by bot id=8255895913
+2026-01-09 20:36:52,503 - handlers - ERROR - Rooms API error: 403 - {"detail":"Authentication credentials were not provided."}
+2026-01-09 20:36:52,626 - aiogram.event - INFO - Update id=22140298 is handled. Duration 125 ms by bot id=8255895913
+2026-01-09 20:39:54,110 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-09 20:39:54,126 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-09 20:39:54,126 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-09 20:39:54,391 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:39:54,392 - __main__ - INFO - Бот остановлен
+2026-01-09 20:39:59,005 - aiogram.dispatcher - INFO - Start polling
+2026-01-09 20:39:59,090 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 20:40:02,772 - aiogram.event - INFO - Update id=22140299 is handled. Duration 265 ms by bot id=8255895913
+2026-01-09 20:40:06,707 - aiogram.event - INFO - Update id=22140300 is handled. Duration 172 ms by bot id=8255895913
+2026-01-09 20:40:10,957 - aiogram.event - INFO - Update id=22140301 is handled. Duration 250 ms by bot id=8255895913
+2026-01-09 20:40:15,908 - aiogram.event - INFO - Update id=22140302 is handled. Duration 531 ms by bot id=8255895913
+2026-01-09 21:01:54,354 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-09 21:01:54,354 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-09 21:01:54,354 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-09 21:01:54,612 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-09 21:01:54,612 - __main__ - INFO - Бот остановлен
