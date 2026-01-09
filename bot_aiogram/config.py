@@ -1,9 +1,10 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=".env")
+load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+API_BASE_URL = os.getenv("API_BASE_URL", "http://127.0.0.1:8000/api")
 
 if not BOT_TOKEN:
-    raise ValueError("BOT_TOKEN не найден. Проверь файл .env")
+    raise ValueError("BOT_TOKEN не найден в файле .env")
