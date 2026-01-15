@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}База данных{% endblock %}
+
+{% block content %}
+<center><h2 class="mb-4">🏢 Выберите офис</h2></center>
+<div class="container mt-5">
+    <div class="row">
+        {% for office in offices %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ office.name }}</h5>
+                        <a href="{% url 'data_base' %}?office_id={{ office.id }}" class="btn btn-primary">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'office-create'%}">Create new Office</a>
+
+</div>
+{% endblock %}

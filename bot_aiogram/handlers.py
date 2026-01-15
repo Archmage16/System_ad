@@ -4,6 +4,8 @@ from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 import aiohttp
 import logging
 
@@ -32,20 +34,99 @@ async def start_command(message: Message):
     await message.answer(
         "👋 Привет! Я бот для управления инцидентами.\n\n"
         "📋 Команды:\n"
-        "/add-incidents — создать инцидент\n"
+        "/add_incidents — создать инцидент\n"
         "/tasks — активные инциденты\n"
         "/solve — закрыть инцидент\n"
         "/id — мой Telegram ID\n"
         "/cancel — отменить действие"
     )
-
+def frequent_incidents_kb():
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="🌐 Не работает интернет", callback_data="incident_internet")],
+            [InlineKeyboardButton(text="🖥 Компьютер не включается", callback_data="incident_pc")],
+            [InlineKeyboardButton(text="🐢 Компьютер тормозит", callback_data="incident_slow")],
+            [InlineKeyboardButton(text="🔑 Забыл пароль", callback_data="incident_password")],
+        ]
+    )
 
 # ---------- /add-incidents ----------
-@router.message(Command("add-incidents"))
+@router.message(Command("add_incidents"))
 async def add_incident_start(message: Message, state: FSMContext):
     await state.clear()
-    await message.answer("📝 Опишите проблему:")
     await state.set_state(IncidentForm.waiting_for_message)
+
+    await message.answer(
+        "📝 Опишите проблему или выберите из списка ниже, либо просто напишите:",
+        reply_markup=frequent_incidents_kb()
+    )
+@router.callback_query(lambda c: c.data.startswith("incident_"))
+async def incident_from_button(call: types.CallbackQuery, state: FSMContext):
+    incidents_map = {
+        "incident_internet": "Не работает интернет",
+        "incident_pc": "Компьютер не включается",
+        "incident_slow": "Компьютер сильно тормозит",
+        "incident_password": "Забыл пароль от системы",
+    }
+
+    incident_text = incidents_map.get(call.data)
+
+    if not incident_text:
+        await call.answer("❌ Неизвестная проблема", show_alert=True)
+        return
+
+    # ⬅️ сохраняем текст как будто пользователь его написал
+    await state.set_state(IncidentForm.waiting_for_message)
+    await state.update_data(user_message=incident_text)
+
+    await call.answer("✅ Проблема выбрана")
+
+    # ⬇️ ИМИТИРУЕМ переход к следующему шагу
+    # Получаем кабинеты (ТОЧНО ТАК ЖЕ, как у тебя в receive_incident_text)
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(f"{API_BASE_URL}/rooms/bot/") as resp:
+                if resp.status != 200:
+                    await call.message.answer("❌ Не удалось получить список кабинетов")
+                    await state.clear()
+                    return
+                rooms = await resp.json()
+    except Exception as e:
+        logger.error(f"Error getting rooms: {e}")
+        await call.message.answer("❌ Ошибка соединения с сервером")
+        await state.clear()
+        return
+
+    if not rooms:
+        await call.message.answer("ℹ️ Кабинеты не настроены. Создаю инцидент...")
+        await create_incident_without_room(call.message, state)
+        return
+
+    kb = InlineKeyboardBuilder()
+    for room in rooms:
+        office_name = (
+            room.get("office", {}).get("name")
+            if isinstance(room.get("office"), dict)
+            else room.get("office_name", "Офис")
+        )
+
+        room_number = room.get("room_number", "N/A")
+        kb.button(
+            text=f"🏢 {office_name} - {room_number}",
+            callback_data=f"room:{room['id']}"
+        )
+
+    kb.button(text="⏭ Без кабинета", callback_data="room:skip")
+    kb.adjust(1)
+
+    await call.message.edit_text(
+        f"📝 Вы выбрали проблему:\n<b>{incident_text}</b>\n\n🏢 Выберите кабинет:",
+        reply_markup=kb.as_markup(),
+        parse_mode="HTML"
+    )
+
+    await state.set_state(IncidentForm.waiting_for_room)
 
 
 @router.message(IncidentForm.waiting_for_message)

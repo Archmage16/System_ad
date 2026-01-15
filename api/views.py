@@ -119,7 +119,11 @@ def data_base_view(request):
         'Incident': Incident.objects.all(),# Инциденты для таблицы
     }
     return render(request, 'dataCRUd/data_base.html', context)
-
+@login_required
+def office_choose_view(request):
+    offices = Office.objects.all()
+    context = {'offices': offices}
+    return render(request, 'dataCRUd/choose_office.html', context)
 @login_required
 def reports_view(request):
     inc = Incident.objects.all() 

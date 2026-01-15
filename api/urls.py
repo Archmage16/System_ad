@@ -6,6 +6,7 @@ urlpatterns = [
     path('logout/', UserLogoutView.as_view(), name='logout'),
     
     path('', HomePage, name='home'),
+    path('office_choose/', office_choose_view, name='office_choose'),
     path('data_base/', data_base_view, name='data_base'),
     path('reports/', reports_view, name='reports'),
 
