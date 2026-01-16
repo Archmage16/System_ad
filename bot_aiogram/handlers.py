@@ -35,10 +35,11 @@ async def start_command(message: Message):
         "👋 Привет! Я бот для управления инцидентами.\n\n"
         "📋 Команды:\n"
         "/add_incidents — создать инцидент\n"
-        "/tasks — активные инциденты\n"
+        "/active_incidents — активные инциденты\n"
         "/solve — закрыть инцидент\n"
+        "/tasks — задачи администраторов\n"
         "/id — мой Telegram ID\n"
-        "/cancel — отменить действие"
+        "/cancel — отменить действие\n"
     )
 def frequent_incidents_kb():
     return InlineKeyboardMarkup(
@@ -75,14 +76,11 @@ async def incident_from_button(call: types.CallbackQuery, state: FSMContext):
         await call.answer("❌ Неизвестная проблема", show_alert=True)
         return
 
-    # ⬅️ сохраняем текст как будто пользователь его написал
     await state.set_state(IncidentForm.waiting_for_message)
     await state.update_data(user_message=incident_text)
 
     await call.answer("✅ Проблема выбрана")
 
-    # ⬇️ ИМИТИРУЕМ переход к следующему шагу
-    # Получаем кабинеты (ТОЧНО ТАК ЖЕ, как у тебя в receive_incident_text)
 
     try:
         async with aiohttp.ClientSession() as session:
@@ -138,7 +136,6 @@ async def receive_incident_text(message: Message, state: FSMContext):
 
     await state.update_data(user_message=text)
 
-    # Получаем кабинеты из Django (используем существующий endpoint)
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(f"{API_BASE_URL}/rooms/bot/") as resp:  # ИСПРАВЛЕНО
@@ -156,14 +153,12 @@ async def receive_incident_text(message: Message, state: FSMContext):
         return
 
     if not rooms:
-        # Если нет кабинетов, создаем инцидент без кабинета
         await message.answer("ℹ️ Кабинеты не настроены. Создаю инцидент без кабинета...")
         await create_incident_without_room(message, state)
         return
 
     kb = InlineKeyboardBuilder()
     for room in rooms:
-        # Форматируем текст кнопки в зависимости от структуры ответа
         if 'office' in room and isinstance(room['office'], dict):
             office_name = room['office'].get('name', 'Офис')
         elif 'office_name' in room:
@@ -206,13 +201,12 @@ async def create_incident_without_room(message: Message, state: FSMContext):
     payload = {
         "telegram_id": message.from_user.id,
         "user_message": user_message,
-        # Не передаем room, чтобы Django создал без кабинета
     }
 
     try:
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                f"{API_BASE_URL}/incidents/",  # ИСПРАВЛЕНО: правильный URL
+                f"{API_BASE_URL}/incidents/", 
                 json=payload
             ) as resp:
 
@@ -258,7 +252,6 @@ async def room_selected(call: types.CallbackQuery, state: FSMContext):
         return
 
     if room_data == "skip":
-        # Создаем инцидент без кабинета
         payload = {
             "telegram_id": call.from_user.id,
             "user_message": user_message
@@ -276,7 +269,7 @@ async def room_selected(call: types.CallbackQuery, state: FSMContext):
     try:
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                f"{API_BASE_URL}/incidents/",  # ИСПРАВЛЕНО: правильный URL
+                f"{API_BASE_URL}/incidents/", 
                 json=payload
             ) as resp:
 
@@ -310,11 +303,10 @@ async def room_selected(call: types.CallbackQuery, state: FSMContext):
         f"📊 Статус: {incident.get('status', 'N/A')}"
     )
 
-    # Редактируем сообщение с кнопками или отправляем новое
     try:
         await call.message.edit_text(response_text)
     except:
-        # Если не удалось отредактировать (например, сообщение слишком старое)
+        
         await call.message.answer(response_text)
         await call.message.delete()
 
@@ -322,15 +314,15 @@ async def room_selected(call: types.CallbackQuery, state: FSMContext):
     await call.answer()
 
 
-# ---------- /tasks ----------
-@router.message(Command("tasks"))
+# ---------- /active_incidents ----------
+@router.message(Command("active_incidents"))
 async def show_tasks(message: Message):
     telegram_id = message.from_user.id
 
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(
-                f"{API_BASE_URL}/incidents/not-done/",  # ИСПРАВЛЕНО: правильный URL
+                f"{API_BASE_URL}/incidents/not-done/",  
                 params={"telegram_id": telegram_id}
             ) as resp:
                 if resp.status == 403 or resp.status == 401:
@@ -363,8 +355,7 @@ async def show_tasks(message: Message):
         )
 
     for part in split_message(text):
-        await message.answer(part, parse_mode="Markdown")  # ИСПРАВЛЕНО: Markdown вместо MarkdownV2
-
+        await message.answer(part, parse_mode="Markdown")  
 
 # ---------- /solve ----------
 @router.message(Command("solve"))
@@ -374,7 +365,7 @@ async def solve_menu(message: Message):
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(
-                f"{API_BASE_URL}/incidents/not-done/",  # ИСПРАВЛЕНО: правильный URL
+                f"{API_BASE_URL}/incidents/not-done/",  
                 params={"telegram_id": telegram_id}
             ) as resp:
                 if resp.status == 403 or resp.status == 401:
@@ -404,6 +395,48 @@ async def solve_menu(message: Message):
         reply_markup=kb.as_markup()
     )
 
+@router.message(Command("tasks"))
+async def show_admin_tasks(message: Message):
+    telegram_id = message.from_user.id
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(
+                f"{API_BASE_URL}/tasks/bot",
+                params={"telegram_id": telegram_id}
+            ) as resp:
+                
+                if resp.status == 403:
+                    await message.answer("⛔️ У вас нет прав администратора")
+                    return
+
+                if resp.status != 200:
+                    await message.answer("❌ Ошибка сервера")
+                    return
+
+                tasks = await resp.json()
+
+    except Exception as e:
+        logger.error(e)
+        await message.answer("❌ Ошибка соединения")
+        return
+
+    if not tasks:
+        await message.answer("✅ Задач нет")
+        return
+
+    text = "📋 *Задачи администраторов:*\n\n"
+    for task in tasks:
+        status = "✅ Выполнена" if task["is_completed"] else "🕒 В работе"
+        text += (
+            f"🆔 *#{task['id']}*\n"
+            f"📌 *{task['title']}*\n"
+            f"📝 {task['description']}\n"
+            f"📊 `{status}`\n\n"
+        )
+
+    for part in split_message(text):
+        await message.answer(part, parse_mode="Markdown")
 
 # ---------- close incident ----------
 @router.callback_query(lambda c: c.data.startswith("close:"))
@@ -414,7 +447,7 @@ async def close_incident(call: types.CallbackQuery):
     try:
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                f"{API_BASE_URL}/incidents/{incident_id}/close/",  # ИСПРАВЛЕНО: правильный URL
+                f"{API_BASE_URL}/incidents/{incident_id}/close/",  
                 json={"telegram_id": telegram_id}
             ) as resp:
                 if resp.status != 200:
@@ -444,7 +477,7 @@ async def close_incident(call: types.CallbackQuery):
 # ---------- /id ----------
 @router.message(Command("id"))
 async def my_id(message: Message):
-    await message.answer(f"🆔 `{message.from_user.id}`", parse_mode="Markdown")  # ИСПРАВЛЕНО: Markdown вместо MarkdownV2
+    await message.answer(f"🆔 `{message.from_user.id}`", parse_mode="Markdown") 
 
 
 # ---------- /cancel ----------

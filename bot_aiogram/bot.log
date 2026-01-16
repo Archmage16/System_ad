@@ -1,631 +1,140 @@
-2026-01-09 19:49:36,625 - aiogram.dispatcher - INFO - Start polling
-2026-01-09 19:49:36,709 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 19:50:13,440 - aiogram.event - INFO - Update id=22140266 is handled. Duration 282 ms by bot id=8255895913
-2026-01-09 19:50:19,241 - aiogram.event - INFO - Update id=22140267 is handled. Duration 109 ms by bot id=8255895913
-2026-01-09 19:50:24,210 - aiogram.event - INFO - Update id=22140268 is not handled. Duration 0 ms by bot id=8255895913
-2026-01-09 19:50:30,625 - aiogram.event - INFO - Update id=22140269 is handled. Duration 109 ms by bot id=8255895913
-2026-01-09 19:50:50,929 - aiogram.event - INFO - Update id=22140270 is handled. Duration 125 ms by bot id=8255895913
-2026-01-09 19:50:59,625 - aiogram.event - INFO - Update id=22140271 is handled. Duration 469 ms by bot id=8255895913
-2026-01-09 19:52:13,472 - aiogram.event - INFO - Update id=22140272 is handled. Duration 125 ms by bot id=8255895913
-2026-01-09 20:12:54,240 - aiogram.dispatcher - INFO - Start polling
-2026-01-09 20:12:54,322 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:13:13,665 - aiogram.event - INFO - Update id=22140273 is handled. Duration 281 ms by bot id=8255895913
-2026-01-09 20:13:21,814 - aiogram.event - INFO - Update id=22140274 is not handled. Duration 15 ms by bot id=8255895913
-2026-01-09 20:13:28,490 - aiogram.event - INFO - Update id=22140275 is not handled. Duration 15 ms by bot id=8255895913
-2026-01-09 20:13:36,234 - aiogram.event - INFO - Update id=22140276 is handled. Duration 125 ms by bot id=8255895913
-2026-01-09 20:13:51,979 - aiogram.event - INFO - Update id=22140277 is handled. Duration 187 ms by bot id=8255895913
-2026-01-09 20:14:08,779 - aiogram.event - INFO - Update id=22140278 is not handled. Duration 0 ms by bot id=8255895913
-2026-01-09 20:14:17,562 - aiogram.event - INFO - Update id=22140279 is not handled. Duration 0 ms by bot id=8255895913
-2026-01-09 20:17:38,068 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-09 20:17:38,070 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-09 20:17:38,070 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-09 20:17:38,324 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:17:38,326 - __main__ - INFO - Бот остановлен
-2026-01-09 20:17:44,248 - aiogram.dispatcher - INFO - Start polling
-2026-01-09 20:17:44,332 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:17:50,518 - aiogram.event - INFO - Update id=22140280 is handled. Duration 358 ms by bot id=8255895913
-2026-01-09 20:17:58,275 - aiogram.event - INFO - Update id=22140281 is handled. Duration 108 ms by bot id=8255895913
-2026-01-09 20:18:12,592 - handlers - ERROR - Rooms API error
-2026-01-09 20:18:12,732 - aiogram.event - INFO - Update id=22140282 is handled. Duration 157 ms by bot id=8255895913
-2026-01-09 20:21:13,340 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-09 20:21:13,342 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-09 20:21:13,342 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-09 20:21:13,593 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:21:13,595 - __main__ - INFO - Бот остановлен
-2026-01-09 20:21:18,793 - aiogram.dispatcher - INFO - Start polling
-2026-01-09 20:21:18,887 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:21:25,428 - aiogram.event - INFO - Update id=22140283 is handled. Duration 407 ms by bot id=8255895913
-2026-01-09 20:21:31,214 - aiogram.event - INFO - Update id=22140284 is handled. Duration 94 ms by bot id=8255895913
-2026-01-09 20:21:35,267 - handlers - ERROR - Rooms API error
-2026-01-09 20:21:35,436 - aiogram.event - INFO - Update id=22140285 is handled. Duration 187 ms by bot id=8255895913
-2026-01-09 20:26:21,345 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-09 20:26:21,345 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-09 20:26:21,345 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-09 20:26:21,610 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:26:21,610 - __main__ - INFO - Бот остановлен
-2026-01-09 20:26:26,485 - aiogram.dispatcher - INFO - Start polling
-2026-01-09 20:26:26,569 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:26:28,242 - aiogram.event - INFO - Update id=22140286 is handled. Duration 327 ms by bot id=8255895913
-2026-01-09 20:26:31,886 - aiogram.event - INFO - Update id=22140287 is handled. Duration 234 ms by bot id=8255895913
-2026-01-09 20:26:38,286 - handlers - ERROR - Rooms API error
-2026-01-09 20:26:38,391 - aiogram.event - INFO - Update id=22140288 is handled. Duration 93 ms by bot id=8255895913
-2026-01-09 20:29:53,748 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-09 20:29:53,749 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-09 20:29:53,750 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-09 20:29:54,015 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:29:54,022 - __main__ - INFO - Бот остановлен
-2026-01-09 20:31:58,253 - aiogram.dispatcher - INFO - Start polling
-2026-01-09 20:31:58,338 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:32:03,420 - aiogram.event - INFO - Update id=22140289 is handled. Duration 281 ms by bot id=8255895913
-2026-01-09 20:32:08,371 - aiogram.event - INFO - Update id=22140290 is handled. Duration 109 ms by bot id=8255895913
-2026-01-09 20:32:12,811 - handlers - ERROR - Rooms API error: 404 - <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Page not found at /rooms/available/</title>
-  <meta name="robots" content="NONE,NOARCHIVE">
-  <style>
-    html * { padding:0; margin:0; }
-    body * { padding:10px 20px; }
-    body * * { padding:0; }
-    body { font-family: sans-serif; background:#eee; color:#000; }
-    body > :where(header, main, footer) { border-bottom:1px solid #ddd; }
-    h1 { font-weight:normal; margin-bottom:.4em; }
-    h1 small { font-size:60%; color:#666; font-weight:normal; }
-    table { border:none; border-collapse: collapse; width:100%; }
-    td, th { vertical-align:top; padding:2px 3px; }
-    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
-    #info { background:#f6f6f6; }
-    #info ol { margin: 0.5em 4em; }
-    #info ol li { font-family: monospace; }
-    #summary { background: #ffc; }
-    #explanation { background:#eee; border-bottom: 0px none; }
-    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
-  </style>
-</head>
-<body>
-  <header id="summary">
-    <h1>Page not found <small>(404)</small></h1>
-    
-    <table class="meta">
-      <tr>
-        <th scope="row">Request Method:</th>
-        <td>GET</td>
-      </tr>
-      <tr>
-        <th scope="row">Request URL:</th>
-        <td>http://127.0.0.1:8000/rooms/available/</td>
-      </tr>
-      
-    </table>
-  </header>
-
-  <main id="info">
-    
-      <p>
-      Using the URLconf defined in <code>diplom.urls</code>,
-      Django tried these URL patterns, in this order:
-      </p>
-      <ol>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                login/
-                [name='login']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                logout/
-                [name='logout']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                
-                [name='home']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                data_base/
-                [name='data_base']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                reports/
-                [name='reports']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/computers/
-                [name='computer-create']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/offices/
-                [name='office-create']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/rooms/
-                [name='room-create']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/incidents/
-                [name='incident-create']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/incidents/not-done/
-                [name='not-done-incidents']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/incidents/&lt;int:incident_id&gt;/close/
-                
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                admin/
-                
-              </code>
-            
-          </li>
-        
-      </ol>
-      <p>
-        
-          The current path, <code>rooms/available/</code>,
-        
-        didn’t match any of these.
-      </p>
-    
-  </main>
-
-  <footer id="explanation">
-    <p>
-      You’re seeing this error because you have <code>DEBUG = True</code> in
-      your Django settings file. Change that to <code>False</code>, and Django
-      will display a standard 404 page.
-    </p>
-  </footer>
-</body>
-</html>
-
-2026-01-09 20:32:12,975 - aiogram.event - INFO - Update id=22140291 is handled. Duration 172 ms by bot id=8255895913
-2026-01-09 20:32:33,443 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-09 20:32:33,443 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-09 20:32:33,443 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-09 20:32:33,703 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:32:33,703 - __main__ - INFO - Бот остановлен
-2026-01-09 20:32:39,565 - aiogram.dispatcher - INFO - Start polling
-2026-01-09 20:32:39,654 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:32:58,004 - aiogram.event - INFO - Update id=22140293 is handled. Duration 1405 ms by bot id=8255895913
-2026-01-09 20:33:00,750 - aiogram.event - INFO - Update id=22140294 is handled. Duration 437 ms by bot id=8255895913
-2026-01-09 20:33:13,786 - handlers - ERROR - Rooms API error: 404 - <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Page not found at /api/rooms/available/</title>
-  <meta name="robots" content="NONE,NOARCHIVE">
-  <style>
-    html * { padding:0; margin:0; }
-    body * { padding:10px 20px; }
-    body * * { padding:0; }
-    body { font-family: sans-serif; background:#eee; color:#000; }
-    body > :where(header, main, footer) { border-bottom:1px solid #ddd; }
-    h1 { font-weight:normal; margin-bottom:.4em; }
-    h1 small { font-size:60%; color:#666; font-weight:normal; }
-    table { border:none; border-collapse: collapse; width:100%; }
-    td, th { vertical-align:top; padding:2px 3px; }
-    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
-    #info { background:#f6f6f6; }
-    #info ol { margin: 0.5em 4em; }
-    #info ol li { font-family: monospace; }
-    #summary { background: #ffc; }
-    #explanation { background:#eee; border-bottom: 0px none; }
-    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
-  </style>
-</head>
-<body>
-  <header id="summary">
-    <h1>Page not found <small>(404)</small></h1>
-    
-    <table class="meta">
-      <tr>
-        <th scope="row">Request Method:</th>
-        <td>GET</td>
-      </tr>
-      <tr>
-        <th scope="row">Request URL:</th>
-        <td>http://127.0.0.1:8000/api/rooms/available/</td>
-      </tr>
-      
-    </table>
-  </header>
-
-  <main id="info">
-    
-      <p>
-      Using the URLconf defined in <code>diplom.urls</code>,
-      Django tried these URL patterns, in this order:
-      </p>
-      <ol>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                login/
-                [name='login']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                logout/
-                [name='logout']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                
-                [name='home']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                data_base/
-                [name='data_base']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                reports/
-                [name='reports']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/computers/
-                [name='computer-create']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/offices/
-                [name='office-create']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/rooms/
-                [name='room-create']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/incidents/
-                [name='incident-create']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/incidents/not-done/
-                [name='not-done-incidents']
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                
-                
-              </code>
-            
-              <code>
-                api/incidents/&lt;int:incident_id&gt;/close/
-                
-              </code>
-            
-          </li>
-        
-          <li>
-            
-              <code>
-                admin/
-                
-              </code>
-            
-          </li>
-        
-      </ol>
-      <p>
-        
-          The current path, <code>api/rooms/available/</code>,
-        
-        didn’t match any of these.
-      </p>
-    
-  </main>
-
-  <footer id="explanation">
-    <p>
-      You’re seeing this error because you have <code>DEBUG = True</code> in
-      your Django settings file. Change that to <code>False</code>, and Django
-      will display a standard 404 page.
-    </p>
-  </footer>
-</body>
-</html>
-
-2026-01-09 20:33:14,571 - aiogram.event - INFO - Update id=22140295 is handled. Duration 797 ms by bot id=8255895913
-2026-01-09 20:36:14,424 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-09 20:36:14,424 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-09 20:36:14,424 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-09 20:36:14,687 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:36:14,687 - __main__ - INFO - Бот остановлен
-2026-01-09 20:36:27,007 - aiogram.dispatcher - INFO - Start polling
-2026-01-09 20:36:27,090 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:36:44,642 - aiogram.event - INFO - Update id=22140296 is handled. Duration 280 ms by bot id=8255895913
-2026-01-09 20:36:48,309 - aiogram.event - INFO - Update id=22140297 is handled. Duration 109 ms by bot id=8255895913
-2026-01-09 20:36:52,503 - handlers - ERROR - Rooms API error: 403 - {"detail":"Authentication credentials were not provided."}
-2026-01-09 20:36:52,626 - aiogram.event - INFO - Update id=22140298 is handled. Duration 125 ms by bot id=8255895913
-2026-01-09 20:39:54,110 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-09 20:39:54,126 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-09 20:39:54,126 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-09 20:39:54,391 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:39:54,392 - __main__ - INFO - Бот остановлен
-2026-01-09 20:39:59,005 - aiogram.dispatcher - INFO - Start polling
-2026-01-09 20:39:59,090 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 20:40:02,772 - aiogram.event - INFO - Update id=22140299 is handled. Duration 265 ms by bot id=8255895913
-2026-01-09 20:40:06,707 - aiogram.event - INFO - Update id=22140300 is handled. Duration 172 ms by bot id=8255895913
-2026-01-09 20:40:10,957 - aiogram.event - INFO - Update id=22140301 is handled. Duration 250 ms by bot id=8255895913
-2026-01-09 20:40:15,908 - aiogram.event - INFO - Update id=22140302 is handled. Duration 531 ms by bot id=8255895913
-2026-01-09 21:01:54,354 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-09 21:01:54,354 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-09 21:01:54,354 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-09 21:01:54,612 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-09 21:01:54,612 - __main__ - INFO - Бот остановлен
-2026-01-15 21:38:44,508 - aiogram.dispatcher - INFO - Start polling
-2026-01-15 21:38:44,594 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:38:50,264 - aiogram.event - INFO - Update id=22140305 is handled. Duration 281 ms by bot id=8255895913
-2026-01-15 21:38:52,270 - aiogram.event - INFO - Update id=22140306 is not handled. Duration 0 ms by bot id=8255895913
-2026-01-15 21:40:09,692 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-15 21:40:09,693 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-15 21:40:09,693 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-15 21:40:09,948 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:40:09,950 - __main__ - INFO - Бот остановлен
-2026-01-15 21:40:14,103 - aiogram.dispatcher - INFO - Start polling
-2026-01-15 21:40:14,185 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:40:19,260 - aiogram.event - INFO - Update id=22140308 is handled. Duration 282 ms by bot id=8255895913
-2026-01-15 21:40:26,389 - aiogram.event - INFO - Update id=22140309 is handled. Duration 117 ms by bot id=8255895913
-2026-01-15 21:40:30,480 - aiogram.event - INFO - Update id=22140310 is handled. Duration 119 ms by bot id=8255895913
-2026-01-15 21:40:30,715 - aiogram.event - INFO - Update id=22140311 is handled. Duration 275 ms by bot id=8255895913
-2026-01-15 21:40:54,828 - aiogram.event - INFO - Update id=22140312 is handled. Duration 223 ms by bot id=8255895913
-2026-01-15 21:41:03,553 - aiogram.event - INFO - Update id=22140313 is handled. Duration 205 ms by bot id=8255895913
-2026-01-15 21:41:08,096 - aiogram.event - INFO - Update id=22140314 is handled. Duration 860 ms by bot id=8255895913
-2026-01-15 21:41:15,860 - aiogram.event - INFO - Update id=22140315 is handled. Duration 114 ms by bot id=8255895913
-2026-01-15 21:41:17,772 - aiogram.event - INFO - Update id=22140316 is handled. Duration 115 ms by bot id=8255895913
-2026-01-15 21:41:19,175 - aiogram.event - INFO - Update id=22140317 is handled. Duration 101 ms by bot id=8255895913
-2026-01-15 21:41:21,681 - aiogram.event - INFO - Update id=22140318 is handled. Duration 120 ms by bot id=8255895913
-2026-01-15 21:44:29,923 - aiogram.dispatcher - INFO - Start polling
-2026-01-15 21:44:30,005 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:44:32,669 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-15 21:44:32,671 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-15 21:44:32,672 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-15 21:44:32,932 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:44:32,935 - __main__ - INFO - Бот остановлен
-2026-01-15 21:47:12,479 - aiogram.dispatcher - INFO - Start polling
-2026-01-15 21:47:12,560 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:47:42,405 - aiogram.event - INFO - Update id=22140319 is handled. Duration 290 ms by bot id=8255895913
-2026-01-15 21:47:43,669 - aiogram.event - INFO - Update id=22140320 is handled. Duration 105 ms by bot id=8255895913
-2026-01-15 21:47:45,975 - aiogram.event - INFO - Update id=22140321 is not handled. Duration 0 ms by bot id=8255895913
-2026-01-15 21:47:49,341 - aiogram.event - INFO - Update id=22140322 is not handled. Duration 0 ms by bot id=8255895913
-2026-01-15 21:47:51,200 - aiogram.event - INFO - Update id=22140323 is handled. Duration 119 ms by bot id=8255895913
-2026-01-15 21:47:55,133 - aiogram.event - INFO - Update id=22140324 is handled. Duration 943 ms by bot id=8255895913
-2026-01-15 21:48:26,154 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-15 21:48:26,157 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-15 21:48:26,158 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-15 21:48:26,421 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:48:26,425 - __main__ - INFO - Бот остановлен
-2026-01-15 21:48:30,764 - aiogram.dispatcher - INFO - Start polling
-2026-01-15 21:48:30,849 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:48:32,649 - aiogram.event - INFO - Update id=22140325 is handled. Duration 287 ms by bot id=8255895913
-2026-01-15 21:48:34,678 - aiogram.event - INFO - Update id=22140326 is handled. Duration 219 ms by bot id=8255895913
-2026-01-15 21:48:38,819 - aiogram.event - INFO - Update id=22140327 is not handled. Duration 0 ms by bot id=8255895913
-2026-01-15 21:48:41,718 - aiogram.event - INFO - Update id=22140328 is not handled. Duration 0 ms by bot id=8255895913
-2026-01-15 21:48:43,607 - aiogram.event - INFO - Update id=22140329 is handled. Duration 161 ms by bot id=8255895913
-2026-01-15 21:48:45,734 - aiogram.event - INFO - Update id=22140330 is handled. Duration 100 ms by bot id=8255895913
-2026-01-15 21:48:49,985 - aiogram.event - INFO - Update id=22140331 is handled. Duration 105 ms by bot id=8255895913
-2026-01-15 21:49:37,867 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-15 21:49:37,870 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-15 21:49:37,871 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-15 21:49:38,125 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:49:38,129 - __main__ - INFO - Бот остановлен
-2026-01-15 21:49:42,384 - aiogram.dispatcher - INFO - Start polling
-2026-01-15 21:49:42,484 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:49:45,758 - aiogram.event - INFO - Update id=22140333 is handled. Duration 285 ms by bot id=8255895913
-2026-01-15 21:49:47,336 - aiogram.event - INFO - Update id=22140334 is handled. Duration 114 ms by bot id=8255895913
-2026-01-15 21:49:48,842 - aiogram.event - INFO - Update id=22140335 is handled. Duration 206 ms by bot id=8255895913
-2026-01-15 21:49:54,127 - aiogram.event - INFO - Update id=22140336 is handled. Duration 789 ms by bot id=8255895913
-2026-01-15 21:50:35,121 - aiogram.dispatcher - INFO - Polling stopped
-2026-01-15 21:50:35,122 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-01-15 21:50:35,122 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
-2026-01-15 21:50:35,384 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
-2026-01-15 21:50:35,385 - __main__ - INFO - Бот остановлен
+2026-01-16 15:34:20,007 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 15:34:20,010 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 15:34:20,012 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 15:34:20,272 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:34:20,273 - __main__ - INFO - Бот остановлен
+2026-01-16 15:34:24,798 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 15:34:24,883 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:34:27,122 - aiogram.event - INFO - Update id=22140337 is handled. Duration 297 ms by bot id=8255895913
+2026-01-16 15:34:29,163 - aiogram.event - INFO - Update id=22140338 is handled. Duration 171 ms by bot id=8255895913
+2026-01-16 15:41:02,578 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 15:41:02,580 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 15:41:02,582 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 15:41:02,835 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:41:02,835 - __main__ - INFO - Бот остановлен
+2026-01-16 15:42:14,076 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 15:42:14,162 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:42:20,688 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 15:42:20,691 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 15:42:20,691 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 15:42:20,946 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:42:20,949 - __main__ - INFO - Бот остановлен
+2026-01-16 15:42:24,440 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 15:42:24,535 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:42:32,730 - aiogram.event - INFO - Update id=22140339 is handled. Duration 312 ms by bot id=8255895913
+2026-01-16 15:42:34,445 - aiogram.event - INFO - Update id=22140340 is handled. Duration 141 ms by bot id=8255895913
+2026-01-16 15:42:38,359 - aiogram.event - INFO - Update id=22140341 is handled. Duration 125 ms by bot id=8255895913
+2026-01-16 15:45:43,666 - aiogram.event - INFO - Update id=22140342 is handled. Duration 234 ms by bot id=8255895913
+2026-01-16 15:45:58,127 - aiogram.event - INFO - Update id=22140343 is handled. Duration 125 ms by bot id=8255895913
+2026-01-16 15:46:19,506 - aiogram.event - INFO - Update id=22140344 is handled. Duration 125 ms by bot id=8255895913
+2026-01-16 15:47:22,269 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 15:47:22,270 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 15:47:22,270 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 15:47:22,522 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:47:22,522 - __main__ - INFO - Бот остановлен
+2026-01-16 15:47:25,883 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 15:47:25,980 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:47:29,300 - aiogram.event - INFO - Update id=22140345 is handled. Duration 280 ms by bot id=8255895913
+2026-01-16 15:47:30,473 - aiogram.event - INFO - Update id=22140346 is handled. Duration 140 ms by bot id=8255895913
+2026-01-16 15:47:45,230 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 15:47:45,230 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 15:47:45,230 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 15:47:45,488 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:47:45,490 - __main__ - INFO - Бот остановлен
+2026-01-16 15:47:48,908 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 15:47:48,998 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:47:51,771 - aiogram.event - INFO - Update id=22140347 is handled. Duration 327 ms by bot id=8255895913
+2026-01-16 15:47:53,456 - handlers - ERROR - Tasks API error: 403 - {"detail":"Authentication credentials were not provided."}
+2026-01-16 15:47:53,563 - aiogram.event - INFO - Update id=22140348 is handled. Duration 108 ms by bot id=8255895913
+2026-01-16 15:48:48,171 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 15:48:48,176 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 15:48:48,176 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 15:48:48,428 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:48:48,431 - __main__ - INFO - Бот остановлен
+2026-01-16 15:48:51,818 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 15:48:51,908 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:48:54,665 - aiogram.event - INFO - Update id=22140349 is handled. Duration 296 ms by bot id=8255895913
+2026-01-16 15:48:55,662 - aiogram.event - INFO - Update id=22140350 is handled. Duration 125 ms by bot id=8255895913
+2026-01-16 15:49:37,870 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 15:49:37,870 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 15:49:37,870 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 15:49:38,141 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:49:38,142 - __main__ - INFO - Бот остановлен
+2026-01-16 15:49:41,470 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 15:49:41,562 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:49:43,412 - aiogram.event - INFO - Update id=22140351 is handled. Duration 296 ms by bot id=8255895913
+2026-01-16 15:49:45,225 - aiogram.event - INFO - Update id=22140352 is handled. Duration 155 ms by bot id=8255895913
+2026-01-16 15:50:04,750 - aiogram.event - INFO - Update id=22140353 is handled. Duration 125 ms by bot id=8255895913
+2026-01-16 15:50:09,300 - aiogram.event - INFO - Update id=22140354 is handled. Duration 140 ms by bot id=8255895913
+2026-01-16 15:50:12,948 - aiogram.event - INFO - Update id=22140355 is handled. Duration 125 ms by bot id=8255895913
+2026-01-16 15:50:14,612 - aiogram.event - INFO - Update id=22140356 is handled. Duration 217 ms by bot id=8255895913
+2026-01-16 15:55:17,202 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 15:55:17,202 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 15:55:17,202 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 15:55:17,467 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:55:17,470 - __main__ - INFO - Бот остановлен
+2026-01-16 15:55:21,632 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 15:55:21,723 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 15:55:26,061 - aiogram.event - INFO - Update id=22140357 is handled. Duration 420 ms by bot id=8255895913
+2026-01-16 15:55:27,754 - aiogram.event - INFO - Update id=22140358 is handled. Duration 109 ms by bot id=8255895913
+2026-01-16 16:08:17,567 - aiogram.event - INFO - Update id=22140359 is handled. Duration 108 ms by bot id=8255895913
+2026-01-16 16:08:39,915 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 16:08:39,920 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 16:08:39,920 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 16:08:40,173 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:08:40,178 - __main__ - INFO - Бот остановлен
+2026-01-16 16:08:44,117 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 16:08:44,212 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:14:57,922 - aiogram.event - INFO - Update id=22140360 is handled. Duration 327 ms by bot id=8255895913
+2026-01-16 16:15:15,992 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 16:15:15,996 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 16:15:15,997 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 16:15:16,263 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:15:16,265 - __main__ - INFO - Бот остановлен
+2026-01-16 16:15:20,237 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 16:15:20,336 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:16:03,675 - aiogram.event - INFO - Update id=22140361 is handled. Duration 296 ms by bot id=8255895913
+2026-01-16 16:16:05,740 - aiogram.event - INFO - Update id=22140362 is handled. Duration 172 ms by bot id=8255895913
+2026-01-16 16:17:10,567 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 16:17:10,569 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 16:17:10,569 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 16:17:10,829 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:17:10,831 - __main__ - INFO - Бот остановлен
+2026-01-16 16:17:14,674 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 16:17:14,766 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:17:25,509 - aiogram.event - INFO - Update id=22140363 is handled. Duration 297 ms by bot id=8255895913
+2026-01-16 16:17:27,134 - aiogram.event - INFO - Update id=22140364 is handled. Duration 140 ms by bot id=8255895913
+2026-01-16 16:18:49,217 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 16:18:49,219 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 16:18:49,219 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 16:18:49,472 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:18:49,476 - __main__ - INFO - Бот остановлен
+2026-01-16 16:18:53,067 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 16:18:53,155 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:18:54,959 - aiogram.event - INFO - Update id=22140365 is handled. Duration 390 ms by bot id=8255895913
+2026-01-16 16:18:56,033 - aiogram.event - INFO - Update id=22140366 is handled. Duration 187 ms by bot id=8255895913
+2026-01-16 16:27:28,693 - aiogram.event - INFO - Update id=22140367 is handled. Duration 141 ms by bot id=8255895913
+2026-01-16 16:32:23,858 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 16:32:23,859 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 16:32:23,860 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 16:32:24,120 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:32:24,123 - __main__ - INFO - Бот остановлен
+2026-01-16 16:32:33,474 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 16:32:33,564 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:32:36,344 - aiogram.event - INFO - Update id=22140368 is handled. Duration 297 ms by bot id=8255895913
+2026-01-16 16:32:37,856 - aiogram.event - INFO - Update id=22140369 is handled. Duration 172 ms by bot id=8255895913
+2026-01-16 16:32:48,505 - aiogram.dispatcher - INFO - Polling stopped
+2026-01-16 16:32:48,506 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-16 16:32:48,507 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8255895913)
+2026-01-16 16:32:48,768 - aiogram.dispatcher - INFO - Polling stopped for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:32:48,771 - __main__ - INFO - Бот остановлен
+2026-01-16 16:32:52,103 - aiogram.dispatcher - INFO - Start polling
+2026-01-16 16:32:52,197 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-01-16 16:33:03,775 - aiogram.event - INFO - Update id=22140370 is handled. Duration 359 ms by bot id=8255895913
+2026-01-16 16:33:05,090 - aiogram.event - INFO - Update id=22140371 is handled. Duration 125 ms by bot id=8255895913
+2026-01-16 16:43:21,769 - aiogram.event - INFO - Update id=22140372 is handled. Duration 187 ms by bot id=8255895913
+2026-01-16 16:43:23,601 - aiogram.event - INFO - Update id=22140373 is handled. Duration 155 ms by bot id=8255895913
+2026-01-16 16:43:53,765 - aiogram.event - INFO - Update id=22140374 is handled. Duration 125 ms by bot id=8255895913
+2026-01-16 16:46:10,085 - aiogram.event - INFO - Update id=22140375 is handled. Duration 125 ms by bot id=8255895913
+2026-01-16 16:46:32,782 - aiogram.event - INFO - Update id=22140376 is handled. Duration 109 ms by bot id=8255895913
+2026-01-16 16:47:00,400 - aiogram.event - INFO - Update id=22140377 is handled. Duration 219 ms by bot id=8255895913

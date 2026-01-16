@@ -12,9 +12,8 @@ from rest_framework.decorators import api_view
 from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 # api
-from api.models import Room, Computer, Incident, Office, TelegramProfile
-from api.serializers import ComputerSerializer, OfficeSerializer, IncidentSerializer, RoomSerializer
-
+from api.models import Room, Computer, Incident, Office, TelegramProfile, Tasks, Notes
+from api.serializers import ComputerSerializer, OfficeSerializer, IncidentSerializer, RoomSerializer, TaskSerializer, NoteSerializer
 class UserLoginView(LoginView):
     template_name = 'login.html'
 class UserLogoutView(LogoutView):
@@ -30,7 +29,12 @@ class OfficeCreateView(generics.ListCreateAPIView):
     queryset = Office.objects.all()
     serializer_class = OfficeSerializer
     permission_classes = [IsAuthenticated, IsSuperUserOrReadOnly]
-    
+
+class TaskCreateView(generics.ListCreateAPIView):
+    queryset = Tasks.objects.all()
+    serializer_class = TaskSerializer
+    permission_classes = [IsAuthenticated, IsSuperUserOrReadOnly]
+
 class RoomCreateView(generics.ListCreateAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
@@ -60,6 +64,44 @@ class IncidentCreateView(generics.ListCreateAPIView):
     queryset = Incident.objects.all()
     serializer_class = IncidentSerializer
     permission_classes = [IsAuthenticated, IsSuperUserOrReadOnly]
+
+class NotesView(generics.ListCreateAPIView):
+    queryset = Notes.objects.all()
+    serializer_class = NoteSerializer
+    permission_classes = [IsAuthenticated]
+@login_required
+def notes_view(request):
+    notes = Notes.objects.all().order_by('-created_at')
+    paginator = Paginator(notes, 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'notes': page_obj,
+        'page_obj': page_obj,
+        'is_paginated': page_obj.has_other_pages(),
+    }
+    return render(request, 'dataCRUd/notes.html', context)
+
+@api_view(['GET'])
+def admin_tasks_bot(request):
+    telegram_id = request.GET.get("telegram_id")
+
+    if not telegram_id:
+        return Response({"error": "telegram_id required"}, status=400)
+
+    try:
+        profile = TelegramProfile.objects.get(telegram_id=telegram_id)
+    except TelegramProfile.DoesNotExist:
+        return Response({"error": "Access denied"}, status=403)
+
+    if not profile.user.is_staff:
+        return Response({"error": "Not admin"}, status=403)
+
+    tasks = Tasks.objects.all().order_by("-created_at")
+    serializer = TaskSerializer(tasks, many=True)
+
+    return Response(serializer.data)
 
 class IncidentCreateView(APIView):
     permission_classes = [AllowAny]

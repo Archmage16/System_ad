@@ -2,9 +2,10 @@
 {% block title %}Главная{% endblock %}
 
 {% block content %}
-<h2>Добро пожаловать, {{ user.username }} 👋</h2>
+<div class="container">
+  <h2>Добро пожаловать, {{ user.username }} </h2>
 
-<div class="row mt-4">
+<div class="row mt-5 g-4 flex_wrap">
   <div class="col-md-4">
     <div class="card shadow-sm">
       <div class="card-body">
@@ -29,10 +30,30 @@
     <div class="card shadow-sm">
       <div class="card-body">
         <h5>🎶 Telegram for admin</h5>
-        <p>Аналитика и статистика</p>
+        <p>Чтобы отслеживать проблемы</p>
         <a href="https://web.telegram.org/k/#@Infradesk_diplom_bot" class="btn btn-danger btn-sm">Перейти</a>
       </div>
     </div>
   </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5>👾Задачи для админов</h5>
+        <p>Улучшить работу филиала</p>
+        <a href="https://web.telegram.org/k/#@Infradesk_diplom_bot" class="btn btn-warning btn-sm">Перейти</a>
+      </div>
+    </div>
+  </div>
+  <div class="notes col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5>📝 Заметки</h5>
+        <p>Ваши личные заметки</p>
+        <a href="{% url 'notes_view'%}" class="btn btn-info btn-sm">Открыть</a>
+      </div>
+    </div>
+
+  </div>
+</div>
 </div>
 {% endblock %}

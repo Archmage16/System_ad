@@ -59,3 +59,19 @@ class TelegramProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+class Tasks(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    is_completed = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+       
+    
+    def __str__(self):
+        return self.title
+    
+class Notes(models.Model):
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Note #{self.id}"
