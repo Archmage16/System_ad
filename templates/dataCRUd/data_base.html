@@ -36,6 +36,7 @@
                     <h5 class="card-title">{{ room.office.name }} - {{ room.room_number }}</h5>
                     <p class="card-text">Макс. мест: {{ room.max_places }}</p>
                     <small class="text-muted">Создано: {{ room.created_at|date:"d.m.Y H:i" }}</small>
+                    <a href="{% url 'computers-by-room' room.id %}" class="btn btn-primary mt-2">Показать компьютеры</a>
                 </div>
             </div>
         </div>
@@ -49,38 +50,7 @@
 
 
 <!-- Computers -->
-<h4 class="mt-4">💻 Компьютеры</h4>
-<div class="table-responsive shadow-sm rounded mb-4">
-<table class="table table-hover table-bordered align-middle bg-white">
-    <thead class="table-dark text-center">
-        <tr>
-            <th>ID</th>
-            <th>Хост</th>
-            <th>IP</th>
-            <th>Пользователь</th>
-            <th>Комната</th>
-            <th>Дата создания</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for computer in data %}
-        <tr>
-            <td class="text-center">{{ computer.id }}</td>
-            <td>{{ computer.hostname }}</td>
-            <td>{{ computer.ip_address }}</td>
-            <td>{{ computer.user_fullname }}</td>
-            <td>{{ computer.room.room_number}}</td>
-            <td class="text-center">{{ computer.created_at|date:"d.m.Y H:i" }}</td>
-        </tr>
-        {% empty %}
-        <tr>
-            <td colspan="6" class="text-center text-muted">Нет компьютеров</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-<center><a href="{% url 'computer-create'%}">Create new Computer</a></center>
-</div>
+
 
 <!-- Incidents -->
 <h4 class="mt-4">⚠️ Инциденты</h4>

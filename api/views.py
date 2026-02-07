@@ -151,16 +151,23 @@ def data_base_view(request):
     paginator = Paginator(computers.order_by('-created_at'), 10)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-
+    Incidents = Incident.objects.filter(status__in=['new', 'in_progress']) # инцеиденты которые не готовы
     context = {
         'data': page_obj,        
         'page_obj': page_obj,
         'is_paginated': page_obj.has_other_pages(),
         'Office': Office.objects.all(),    # Офисы для карточек
         'Room': Room.objects.all(),        # Комнаты для карточек
-        'Incident': Incident.objects.all(),# Инциденты для таблицы
+        'Incident': Incidents,# Инциденты для таблицы
     }
     return render(request, 'dataCRUd/data_base.html', context)
+
+@login_required
+def computer_by_room_view(request, room_id):
+    computers = Computer.objects.filter(room_id=room_id)
+    context = {'computers': computers}
+    return render(request, 'dataCRUd/computers_by_room.html', context)
+    
 @login_required
 def office_choose_view(request):
     offices = Office.objects.all()

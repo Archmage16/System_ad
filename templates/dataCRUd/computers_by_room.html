@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Компьютеры в комнате{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">💻 Компьютеры в комнате {{ room_id }}</h2>
+    <div class="row">
+        {% for computer in computers %}
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ computer.hostname }}</h5>
+                    <p class="card-text">IP: {{ computer.ip_address }}</p>
+                    <p class="card-text">Пользователь: {{ computer.user_fullname }}</p>
+                    <small class="text-muted">Создано: {{ computer.created_at|date:"d.m.Y H:i" }}</small>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-muted">Нет компьютеров в этой комнате</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

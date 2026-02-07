@@ -22,6 +22,8 @@ urlpatterns = [
     path('api/incidents/not-done/', not_done_incidents, name='not-done-incidents'),
     path('api/notes/', NotesView.as_view(), name='notes_api'),
     path("api/incidents/<int:incident_id>/close/", close_incident),
+    path('rooms/<int:room_id>/computers/', computer_by_room_view, name='computers-by-room'),
+    
 
 ]
 # 54321
