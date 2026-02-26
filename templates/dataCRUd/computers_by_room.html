@@ -19,6 +19,7 @@
         {% empty %}
         <p class="text-muted">Нет компьютеров в этой комнате</p>
         {% endfor %}
+        <a href="{% url 'computer-create' %}" class="">Create computer</a>
     </div>
 </div>
 {% endblock %}

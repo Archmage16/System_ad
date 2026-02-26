@@ -3,6 +3,12 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.utils import timezone
+#diplomas
+from rest_framework.response import Response
+from rest_framework import status
+
+from diplomas.models import Upload
+from diplomas.tasks import process_upload
 # rest.
 from rest_framework.permissions import IsAuthenticated
 from api.permissions import IsSuperUserOrReadOnly
@@ -234,3 +240,31 @@ def close_incident(request, incident_id):
     incident.save()
 
     return Response({"ok": True})
+
+
+
+
+
+
+
+
+class GenerateDiplomasView(APIView):
+
+    def post(self, request):
+
+        file = request.FILES.get("file")
+
+        if not file:
+            return Response(
+                {"error": "File not provided"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        upload = Upload.objects.create(file=file)
+
+        process_upload.delay(upload.id)
+
+        return Response(
+            {"upload_id": upload.id},
+            status=status.HTTP_201_CREATED
+        )

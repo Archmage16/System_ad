@@ -138,3 +138,10 @@
 2026-01-16 16:46:10,085 - aiogram.event - INFO - Update id=22140375 is handled. Duration 125 ms by bot id=8255895913
 2026-01-16 16:46:32,782 - aiogram.event - INFO - Update id=22140376 is handled. Duration 109 ms by bot id=8255895913
 2026-01-16 16:47:00,400 - aiogram.event - INFO - Update id=22140377 is handled. Duration 219 ms by bot id=8255895913
+2026-02-26 16:16:43,525 - aiogram.dispatcher - INFO - Start polling
+2026-02-26 16:16:43,606 - aiogram.dispatcher - INFO - Run polling for bot @Infradesk_diplom_bot id=8255895913 - 'Diplom'
+2026-02-26 16:18:28,096 - aiogram.event - INFO - Update id=22140397 is handled. Duration 333 ms by bot id=8255895913
+2026-02-26 16:18:34,233 - aiogram.event - INFO - Update id=22140398 is handled. Duration 133 ms by bot id=8255895913
+2026-02-26 16:18:39,740 - aiogram.event - INFO - Update id=22140399 is handled. Duration 104 ms by bot id=8255895913
+2026-02-26 16:18:42,804 - aiogram.event - INFO - Update id=22140400 is handled. Duration 111 ms by bot id=8255895913
+2026-02-26 16:18:48,868 - aiogram.event - INFO - Update id=22140401 is handled. Duration 214 ms by bot id=8255895913

@@ -64,7 +64,6 @@
             <th>Сообщение</th>
             <th>Статус</th>
             <th>Создано</th>
-            <th>Закрыто</th>
         </tr>
     </thead>
     <tbody>
@@ -76,7 +75,6 @@
             <td>{{ incident.user_message|truncatechars:50 }}</td>
             <td>{{ incident.get_status_display }}</td>
             <td class="text-center">{{ incident.created_at|date:"d.m.Y H:i" }}</td>
-            <td class="text-center">{{ incident.closed_at|date:"d.m.Y H:i" }}</td>
         </tr>
         {% empty %}
         <tr>
