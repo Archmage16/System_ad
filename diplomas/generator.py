@@ -17,9 +17,8 @@ from .models import Diploma
 
 
 BASE_DIR = Path(settings.BASE_DIR)
-FONTS_DIR = BASE_DIR / "assets/fonts"
-TEMPLATES_DIR = BASE_DIR / "assets/pdf_templates"
-
+TEMPLATES_DIR = BASE_DIR / "assests/pdf_templates"  # s в assests
+FONTS_DIR = BASE_DIR / "assests/fonts"
 # ==============================
 # 1. ШРИФТЫ
 # ==============================
@@ -145,13 +144,59 @@ def merge_with_template(template_path, overlay_buffer):
 # ==============================
 
 def generate_diplomas(upload):
+    
+    register_fonts()
+    upload.status = "processing"
+    upload.save()
+
+    students = parse_students(upload.file.path)
+
+    template_ru = TEMPLATES_DIR / "template_diploma.pdf"
+    template_en = TEMPLATES_DIR / "template_diploma.pdf"
+
+    for student in students:
+
+        overlay_ru = build_overlay(student, language="ru")
+        overlay_en = build_overlay(student, language="en")
+
+        diploma_ru = PdfReader(io.BytesIO(
+            merge_with_template(template_ru, overlay_ru)
+        ))
+
+        diploma_en = PdfReader(io.BytesIO(
+            merge_with_template(template_en, overlay_en)
+        ))
+
+        writer = PdfWriter()
+        writer.add_page(diploma_ru.pages[0])
+        writer.add_page(diploma_en.pages[0])
+
+        final_buffer = io.BytesIO()
+        writer.write(final_buffer)
+        final_buffer.seek(0)
+
+        diploma = Diploma.objects.create(
+            upload=upload,
+            student_name=student.get("ФИО") or student.get("Full Name")
+        )
+
+        diploma.pdf_file.save(
+            f"{diploma.student_name}.pdf",
+            ContentFile(final_buffer.read()),
+            save=True
+        )
+
+    upload.status = "done"
+    upload.save()
 
     register_fonts()
 
     students = parse_students(upload.file.path)
+    print("Создаём диплом для:", student.get("ФИО") or student.get("Full Name"))
+    print("Файл сохранится в:", settings.MEDIA_ROOT / "diplomas")
 
-    template_ru = BASE_DIR / "MKA/template_diploma_ru.pdf"
-    template_en = BASE_DIR / "MKA/template_diploma_en.pdf"
+    template_ru = BASE_DIR / "assests/pdf_templates/template_diploma.pdf"
+    template_en = BASE_DIR / "assests/pdf_templates/template_diploma.pdf"
 
     for student in students:
 
