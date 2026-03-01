@@ -1,0 +1,16 @@
+# Игнорируем содержимое папок, но оставляем сами папки в Git
+media/*
+!media/.gitkeep
+
+diplom/*
+!diplom/.gitkeep
+
+diplomas/*
+!diplomas/.gitkeep
+
+# Базу данных и архивы игнорируем полностью
+db.sqlite3
+*.zip
+
+# Кэш Python
+__pycache__/
